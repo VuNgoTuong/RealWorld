@@ -1,0 +1,38 @@
+.navbar{
+  position: relative;
+  padding: 8px 30px;
+  width: 100%;
+}
+
+.navbar-brand{
+  font-size: 25px!important;
+  font-weight: bold;
+  color: #5cb85c;
+  margin-left: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: gray;
+}
+
+ul{
+  margin-top: 0;
+}
+
+// li {
+//   color: #f1f1f1;
+//   display: inline-block;
+//   height: 50px;
+//   margin-right: 20px;
+// }
+
+.my-lg-0{
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.form-control{
+  margin-right: 1px;
+}

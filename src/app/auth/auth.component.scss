@@ -1,0 +1,47 @@
+.container.page {
+  margin-top: 1.5rem;
+}
+
+.text-xs-center {
+  text-align: center;
+}
+
+a {
+  color: #5cb85c;
+  text-decoration: none;
+}
+
+.form-control-lg{
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.btn {
+  // float: right;
+  display: block;
+  margin: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.text-xs-center{
+  padding-top: 0px;
+}
+
+.form-control-lg{
+  width: 50%;
+  display: block;
+  margin: auto;
+}

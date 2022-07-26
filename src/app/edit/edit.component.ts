@@ -1,0 +1,72 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Article, ArticlesService } from '../core';
+
+@Component({
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.scss']
+})
+export class editComponent implements OnInit {
+  editForm! : FormGroup;
+  article: Article = {} as Article;
+  articleForm: FormGroup;
+  tagField = new FormControl();
+  errors: Object = {};
+  isSubmitting = false;
+
+  constructor(
+    private articlesService: ArticlesService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private fb: FormBuilder
+  ) {
+    this.articleForm = this.fb.group({
+      title: '',
+      description: '',
+      body: ''
+    });
+
+    this.article.tagList = [];
+  }
+
+  ngOnInit() {
+    this.route.data.subscribe((data) => {
+      if (data?.['article']) {
+        this.article = data?.['article'];
+        this.articleForm.patchValue(data?.['article']);
+      }
+    });
+  }
+
+  addTag() {
+    const tag = this.tagField.value;
+    if (this.article.tagList.indexOf(tag) < 0) {
+      this.article.tagList.push(tag);
+    }
+    this.tagField.reset('');
+  }
+
+  removeTag(tagName: string) {
+    this.article.tagList = this.article.tagList.filter(tag => tag !== tagName);
+  }
+
+  submitForm() {
+    this.isSubmitting = true;
+
+    this.updateArticle(this.articleForm.value);
+
+    this.articlesService.save(this.article).subscribe(
+      article => this.router.navigateByUrl('/article/' + article.slug),
+      err => {
+        this.errors = err;
+        this.isSubmitting = false;
+      }
+    );
+  }
+
+  updateArticle(values: Object) {
+    Object.assign(this.article, values);
+  }
+}

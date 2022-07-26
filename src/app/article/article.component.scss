@@ -1,0 +1,127 @@
+.article-page .banner .article-meta{
+  padding: 2rem;
+  padding-left: 120px;
+  margin-top: -40px;
+}
+
+.banner{
+  color: white;
+  background: #333;
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 2.8rem;
+  font-weight: 500;
+  padding-left: 100px;
+}
+
+.article-meta{
+  margin: 2rem;
+  padding-left: 140px;
+}
+
+.info{
+  margin: 0 1.5rem 0 0.3rem;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1rem;
+  // margin-top: -20px;
+}
+
+.author{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-weight: 500;
+}
+
+.article-page .article-content p{
+  margin-bottom: 2rem;
+  padding-left: 120px;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.card .card-block .card-text{
+  margin-bottom: 2rem;
+  padding-left: 120px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+
+.tag-default.tag-outline   {
+  list-style: none;
+  border: 1px solid #ddd;
+  color: #aaa!important;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.article-meta .info a{
+  color: #5cb85c;
+  text-decoration: none;
+}
+
+.article-page .comment-form .card-block textarea{
+  border: 0;
+  padding: 1.25rem;
+}
+
+.article-page .card {
+  border: 1px solid #e5e5e5;
+  box-shadow: none!important;
+}
+
+.article-page .comment-form .card-block {
+  padding: 0;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+textarea{
+  border:0;
+  padding: 1.25rem;
+  // width: 100%;
+}
+
+.form-control {
+  display: block;
+  width: 97%;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #55595c;
+  border-radius: 0.25rem;
+}
+
+.article-page .card .card-footer {
+  box-shadow: none!important;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.article-page .comment-form .card-footer .comment-author-img {
+  height: 30px;
+  width: 30px;
+}
+
+.article-page .comment-form .card-footer .btn {
+  font-weight: 700;
+  float: right;
+}
+
+.btn-sm{
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.btn-primary{
+  color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
